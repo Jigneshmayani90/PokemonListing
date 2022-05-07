@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DBAbilities" representedClassName="DBAbilities" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DBPokeDetails" representedClassName="DBPokeDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="abilities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DBAbilities"/>
+        <relationship name="sprites" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DBSprites"/>
+        <relationship name="types" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DBTypes"/>
+    </entity>
+    <entity name="DBSprites" representedClassName="DBSprites" syncable="YES" codeGenerationType="class">
+        <attribute name="back_default" optional="YES" attributeType="String"/>
+        <attribute name="back_shiny" optional="YES" attributeType="String"/>
+        <attribute name="front_default" optional="YES" attributeType="String"/>
+        <attribute name="front_shiny" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DBTypes" representedClassName="DBTypes" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="DBAbilities" positionX="139.5234375" positionY="-13.078125" width="115.87109375" height="58"/>
+        <element name="DBPokeDetails" positionX="-39.76171875" positionY="-108.29296875" width="128" height="148"/>
+        <element name="DBSprites" positionX="133.0859375" positionY="118.91796875" width="128" height="103"/>
+        <element name="DBTypes" positionX="-84.6875" positionY="59.875" width="128" height="58"/>
+    </elements>
+</model>
